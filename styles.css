@@ -1,82 +1,132 @@
 body {
+    background-color: #F8F0FA;
+    color: #4A3A4D;
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: white;
-    color: black;
 }
 
 header {
-    background-color: pink;
+    background-color: #D8B4E2;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
+}
+
+header h1 {
+    color: #5E3F68;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+header p {
+    color: #6E5575;
 }
 
 nav {
-    margin-top: 15px;
+    text-align: center;
 }
 
 nav a {
-    margin: 10px;
-    color: black;
+    color: #5E3F68;
     text-decoration: none;
+    font-weight: bold;
+    margin: 10px;
 }
 
 nav a:hover {
-    color: deeppink;
+    color: #9B72B0;
 }
 
 main {
-    padding: 20px;
+    padding: 30px 20px;
 }
 
 section {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
-h2 {
-    color: deeppink;
+section h2 {
+    color: #6E4A78;
+    text-align: center;
+    font-size: 26px;
 }
 
-article {
-    border: 1px solid lightpink;
-    padding: 15px;
-    margin: 15px 0;
+section p {
+    text-align: center;
 }
 
-article:hover {
-    background-color: #fff0f5;
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 900px;
+    margin: auto;
 }
 
-aside {
-    border: 1px solid lightpink;
-    padding: 15px;
-    margin-bottom: 30px;
+.product-card {
+    background-color: white;
+    padding: 18px;
+    border-radius: 15px;
+    text-align: center;
 }
 
-form {
-    max-width: 400px;
-}
-
-input,
-textarea {
+.product-image {
     width: 100%;
-    padding: 8px;
-    margin: 8px 0;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 15px;
 }
 
-button {
-    background-color: deeppink;
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.product-card h3 {
+    color: #5E3F68;
+    font-size: 18px;
+}
+
+.product-card p {
+    font-size: 14px;
+}
+
+.price {
+    color: #9B72B0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.shade {
+    font-style: italic;
+    color: #806B84;
+}
+
+.buy-button {
+    display: inline-block;
+    background-color: #C99ACB;
     color: white;
-    border: none;
-    padding: 10px 20px;
+    padding: 10px 22px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-decoration: none;
 }
 
-button:hover {
-    background-color: hotpink;
+.buy-button:hover {
+    background-color: #9B72B0;
 }
 
 footer {
-    background-color: lightpink;
+    background-color: #D8B4E2;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
+}
+
+footer h2 {
+    color: #5E3F68;
+}
+
+footer p {
+    font-size: 13px;
 }
