@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rissjanne | E-Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@400;500;600&family=Sacramento&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fffaf7;
+    color: #5b4545;
+    font-family: "DM Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+:root {
+    --cream: #fffaf7;
+    --cream-dark: #f7eee8;
+    --pink: #e8b5c2;
+    --pink-dark: #b97889;
+    --pink-light: #f8e5ea;
+    --brown: #5b4545;
+    --brown-light: #806c6c;
+    --line: #eadbd6;
+}
+
+
+/* NAVIGATION */
+
+nav {
+    height: 76px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255,250,247,.96);
+    border-bottom: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(12px);
+}
+
+.logo {
+    text-decoration: none;
+    color: var(--brown);
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+}
+
+.logo span {
+    color: var(--pink-dark);
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--brown-light);
+    font-size: 9px;
+    letter-spacing: 1.4px;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: var(--pink-dark);
+}
+
+
+/* BACK HOME */
+
+.back-home {
+    width: min(1100px, 90%);
+    margin: 25px auto 0;
+}
+
+.back-home a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--brown-light);
+    font-size: 9px;
+    letter-spacing: 1px;
+    padding: 9px 17px;
+    border: 1px solid #e5cfca;
+    border-radius: 20px;
+    background: var(--cream);
+    transition: .3s;
+}
+
+.back-home a:hover {
+    background: var(--pink-light);
+    color: var(--pink-dark);
+    transform: translateX(-3px);
+}
+
+
+/* HERO */
+
+.hero {
+    width: min(1100px, 90%);
+    margin: auto;
+    padding: 65px 20px 90px;
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 70px;
+    align-items: center;
+}
+
+.hero-label {
+    color: var(--pink-dark);
+    font-size: 9px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(48px, 7vw, 76px);
+    line-height: 1;
+    font-weight: 500;
+    color: var(--brown);
+    margin-bottom: 24px;
+}
+
+.hero h1 span {
+    color: var(--pink-dark);
+    font-style: italic;
+}
+
+.hero-description {
+    max-width: 570px;
+    color: var(--brown-light);
+    font-size: 12px;
+    line-height: 2;
+}
+
+.script {
+    font-family: "Sacramento", cursive;
+    color: var(--pink-dark);
+    font-size: 31px;
+    margin-top: 22px;
+}
+
+.hero-photo {
+    position: relative;
+}
+
+.hero-photo img {
+    width: 100%;
+    height: 470px;
+    object-fit: cover;
+    display: block;
+    border: 10px solid white;
+    outline: 1px solid #e3ccc6;
+    box-shadow: 14px 18px 35px rgba(91,69,69,.10);
+    transform: rotate(2deg);
+}
+
+.hero-photo::before {
+    content: "";
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    background: var(--pink-light);
+    border-radius: 50%;
+    top: -25px;
+    right: -45px;
+    z-index: -1;
+}
+
+
+/* GENERAL SECTIONS */
+
+.section {
+    width: min(1100px, 90%);
+    margin: auto;
+    padding: 75px 20px;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 35px;
+}
+
+.section-number {
+    color: var(--pink-dark);
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 34px;
+    font-weight: 500;
+    color: var(--brown);
+}
+
+.line {
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+}
+
+
+/* ABOUT */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-text p {
+    color: var(--brown-light);
+    font-size: 12px;
+    line-height: 2;
+    margin-bottom: 15px;
+}
+
+.about-note {
+    background: var(--pink-light);
+    border: 1px solid #e7cbd2;
+    padding: 30px;
+    font-family: "Sacramento", cursive;
+    font-size: 30px;
+    color: var(--brown);
+    transform: rotate(-1deg);
+}
+
+
+/* INTERESTS */
+
+.interests-section {
+    width: 100%;
+    background: var(--cream-dark);
+    padding: 80px 5%;
+    border-top: 1px dashed #dec6c0;
+    border-bottom: 1px dashed #dec6c0;
+}
+
+.interests-inner {
+    width: min(1100px, 100%);
+    margin: auto;
+}
+
+.interest-intro {
+    color: var(--brown-light);
+    font-size: 11px;
+    line-height: 1.9;
+    max-width: 650px;
+    margin-bottom: 30px;
+}
+
+.interest-gallery {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr .9fr;
+    gap: 15px;
+}
+
+.interest-photo {
+    background: white;
+    padding: 8px;
+    border: 1px solid var(--line);
+}
+
+.interest-photo img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    display: block;
+}
+
+.interest-photo:first-child img {
+    height: 340px;
+}
+
+.interest-caption {
+    padding: 12px 8px 7px;
+    font-family: "Playfair Display", serif;
+    font-size: 15px;
+}
+
+
+/* CAREER */
+
+.career {
+    width: 100%;
+    background: var(--brown);
+    color: white;
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.career-inner {
+    width: min(850px, 100%);
+    margin: auto;
+}
+
+.career-label {
+    color: #eab8c5;
+    font-size: 9px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.career h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 42px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.career h2 span {
+    color: #eab8c5;
+    font-style: italic;
+}
+
+.career p {
+    color: #ead7d7;
+    font-size: 12px;
+    line-height: 2;
+}
+
+
+/* SKILLS */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.skill-card {
+    background: white;
+    border: 1px solid var(--line);
+    padding: 30px;
+}
+
+.skill-card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 18px;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill {
+    background: var(--pink-light);
+    color: var(--pink-dark);
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 9px;
+}
+
+
+/* CREATOR JOURNEY */
+
+.creator-section {
+    background: #fff;
+    width: 100%;
+    padding: 80px 5%;
+    border-top: 1px solid var(--line);
+}
+
+.creator-inner {
+    width: min(1100px, 100%);
+    margin: auto;
+}
+
+.creator-intro {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 45px;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.creator-intro img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    border: 8px solid var(--cream);
+    outline: 1px solid var(--line);
+}
+
+.creator-text h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 34px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.creator-text p {
+    color: var(--brown-light);
+    font-size: 12px;
+    line-height: 2;
+    margin-bottom: 12px;
+}
+
+.creator-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 13px;
+}
+
+.creator-gallery img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border: 1px solid var(--line);
+    padding: 5px;
+    background: white;
+}
+
+
+/* BEAUTY */
+
+.beauty-section {
+    background: var(--cream-dark);
+    width: 100%;
+    padding: 80px 5%;
+}
+
+.beauty-inner {
+    width: min(1100px, 100%);
+    margin: auto;
+}
+
+.beauty-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.beauty-card {
+    background: white;
+    border: 1px solid var(--line);
+    padding: 9px;
+}
+
+.beauty-card img {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    display: block;
+}
+
+.beauty-card p {
+    font-family: "Playfair Display", serif;
+    padding: 15px 8px 9px;
+    font-size: 16px;
+}
+
+
+/* PROJECTS */
+
+.projects-section {
+    width: 100%;
+    background: #fff;
+    padding: 80px 5%;
+}
+
+.projects-inner {
+    width: min(1100px, 100%);
+    margin: auto;
+}
+
+.project {
+    background: var(--cream);
+    border: 1px solid var(--line);
+    padding: 35px;
+    margin-bottom: 25px;
+}
+
+.project-label {
+    color: var(--pink-dark);
+    font-size: 9px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.project h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 29px;
+    font-weight: 500;
+    margin-bottom: 13px;
+}
+
+.project p {
+    color: var(--brown-light);
+    font-size: 11px;
+    line-height: 1.9;
+    max-width: 850px;
+}
+
+.project-photos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.project-photos img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border: 1px solid var(--line);
+    display: block;
+}
+
+.cafe-project {
+    display: grid;
+    grid-template-columns: 1fr .8fr;
+    gap: 35px;
+    align-items: center;
+}
+
+.cafe-project img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    border: 8px solid white;
+    outline: 1px solid var(--line);
+}
+
+
+/* STUDENT */
+
+.student-section {
+    width: 100%;
+    background: var(--cream-dark);
+    padding: 80px 5%;
+    border-top: 1px dashed #dec6c0;
+    border-bottom: 1px dashed #dec6c0;
+}
+
+.student-inner {
+    width: min(1100px, 100%);
+    margin: auto;
+}
+
+.student-grid {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.student-grid img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border: 9px solid var(--cream);
+    outline: 1px solid var(--line);
+}
+
+.student-text h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 34px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.student-text p {
+    color: var(--brown-light);
+    font-size: 12px;
+    line-height: 2;
+}
+
+
+/* JOURNEY */
+
+.journey {
+    width: min(900px, 90%);
+    margin: auto;
+    padding: 85px 20px;
+    text-align: center;
+}
+
+.journey p {
+    color: var(--brown-light);
+    font-size: 12px;
+    line-height: 2;
+    margin-bottom: 15px;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 30px;
+    text-align: center;
+    background: var(--brown);
+    color: #f4dfe4;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+footer span {
+    color: #eab8c5;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-description {
+        margin: auto;
+    }
+
+    .hero-photo {
+        width: min(380px, 90%);
+        margin: auto;
+    }
+
+    .about-grid,
+    .creator-intro,
+    .student-grid,
+    .skills-grid,
+    .cafe-project {
+        grid-template-columns: 1fr;
+    }
+
+    .interest-gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .interest-photo:first-child {
+        grid-column: span 2;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    nav {
+        padding: 0 18px;
+    }
+
+    .nav-links {
+        gap: 9px;
+    }
+
+    .nav-links a {
+        font-size: 7px;
+        letter-spacing: .5px;
+    }
+
+    .logo {
+        font-size: 17px;
+    }
+
+    .hero {
+        padding-top: 50px;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .hero-photo img {
+        height: 400px;
+    }
+
+    .interest-gallery,
+    .creator-gallery,
+    .beauty-grid,
+    .project-photos {
+        grid-template-columns: 1fr;
+    }
+
+    .interest-photo:first-child {
+        grid-column: auto;
+    }
+
+    .interest-photo img,
+    .interest-photo:first-child img {
+        height: 330px;
+    }
+
+    .career h2 {
+        font-size: 34px;
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <a href="index.html" class="logo">
+        <span>♡</span> RISSJANNE
+    </a>
+
+    <div class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="eportfolio.html">E-PORTFOLIO</a>
+        <a href="marketplace.html">MARKETPLACE</a>
+        <a href="finalproject.html">FINAL PROJECT</a>
+    </div>
+
+</nav>
+
+
+<!-- BACK TO HOME -->
+
+<div class="back-home">
+    <a href="index.html">← Back to Home</a>
+</div>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div>
+
+        <p class="hero-label">♡ WELCOME TO MY E-PORTFOLIO ♡</p>
+
+        <h1>
+            creativity,<br>
+            <span>experiences</span> & growth.
+        </h1>
+
+        <p class="hero-description">
+            Welcome to my personal space where I share
+            the experiences, interests, projects, and skills
+            that continue to shape me as a Marketing student
+            and UGC creator.
+        </p>
+
+        <div class="script">
+            creating · learning · exploring ♡
+        </div>
+
+    </div>
+
+
+    <div class="hero-photo">
+
+        <img
+            src="https://uploads.onecompiler.io/452qssypm/1791381904743/DFAE664A-E6CA-45BA-8708-C8500DC78215.png"
+            alt="Rissjanne portrait"
+        >
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="section">
+
+    <div class="section-title">
+        <span class="section-number">01</span>
+        <h2>A Bit About Me</h2>
+        <div class="line"></div>
+    </div>
+
+    <div class="about-grid">
+
+        <div class="about-text">
+
+            <p>
+                I am currently a first-year Marketing student.
+                I enjoy creating content, especially UGC content
+                for different brands, while learning more about
+                Marketing and social media.
+            </p>
+
+            <p>
+                I chose Marketing because of how in-demand the
+                field is in today's generation. As a UGC creator,
+                I also want to apply what I learn in Marketing
+                to the content I create.
+            </p>
+
+            <p>
+                I'm naturally an introvert, but content creation
+                has encouraged me to communicate, explore new
+                experiences, and become more comfortable sharing
+                my ideas.
+            </p>
+
+        </div>
+
+        <div class="about-note">
+            "I'm discovering my path
+            while creating one
+            along the way."
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- INTERESTS -->
+
+<section class="interests-section">
+
+<div class="interests-inner">
+
+    <div class="section-title">
+        <span class="section-number">02</span>
+        <h2>Things I Love</h2>
+        <div class="line"></div>
+    </div>
+
+    <p class="interest-intro">
+        Outside school and content creation, I enjoy
+        discovering cafés, exploring beauty, and finding
+        creative ways to turn everyday interests into content.
+    </p>
+
+    <div class="interest-gallery">
+
+        <div class="interest-photo">
+            <img
+                src="https://uploads.onecompiler.io/452qssypm/1791381971239/IMG_2219.jpeg"
+                alt="Café"
+            >
+            <div class="interest-caption">Café exploring ☕</div>
+        </div>
+
+        <div class="interest-photo">
+            <img
+                src="https://uploads.onecompiler.io/452qssypm/1791382096734/IMG_5932.jpeg"
+                alt="Beauty"
+            >
+            <div class="interest-caption">Beauty & makeup ♡</div>
+        </div>
+
+        <div class="interest-photo">
+            <img
+                src="https://uploads.onecompiler.io/452qssypm/1791382035452/IMG_8987.jpeg"
+                alt="Content creation"
+            >
+            <div class="interest-caption">Creating content 🎥</div>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- CAREER -->
+
+<section class="career">
+
+<div class="career-inner">
+
+    <p class="career-label">WHERE I'M HEADED</p>
+
+    <h2>
+        finding my path,<br>
+        <span>one experience at a time.</span>
+    </h2>
+
+    <p>
+        I want to explore a career in social media marketing
+        or public relations. I'm still discovering which
+        direction fits me best, but I know I want to work
+        somewhere I can combine creativity, communication,
+        marketing, and content creation.
+    </p>
+
+</div>
+
+</section>
+
+
+<!-- SKILLS -->
+
+<section class="section">
+
+    <div class="section-title">
+        <span class="section-number">03</span>
+        <h2>What I Bring</h2>
+        <div class="line"></div>
+    </div>
+
+    <div class="skills-grid">
+
+        <div class="skill-card">
+
+            <h3>Technical Skills</h3>
+
+            <div class="skill-list">
+                <span class="skill">Canva</span>
+                <span class="skill">Video Editing</span>
+                <span class="skill">Content Creation</span>
+                <span class="skill">Social Media</span>
+                <span class="skill">Content Planning</span>
+            </div>
+
+        </div>
+
+        <div class="skill-card">
+
+            <h3>Personal Strengths</h3>
+
+            <div class="skill-list">
+                <span class="skill">Creativity</span>
+                <span class="skill">Communication</span>
+                <span class="skill">Teamwork</span>
+                <span class="skill">Adaptability</span>
+                <span class="skill">Organization</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CREATOR JOURNEY -->
+
+<section class="creator-section">
+
+<div class="creator-inner">
+
+    <div class="section-title">
+        <span class="section-number">04</span>
+        <h2>My Creator Journey</h2>
+        <div class="line"></div>
+    </div>
+
+    <div class="creator-intro">
+
+        <img
+            src="https://uploads.onecompiler.io/452qssypm/1791382295145/IMG_7116.jpeg"
+            alt="Rissjanne Instagram profile and creator setup"
+        >
+
+        <div class="creator-text">
+
+            <h3>
+                Turning creativity
+                into something real.
+            </h3>
+
+            <p>
+                I've been creating UGC content since May 2025.
+                Through UGC, I've had the opportunity to work
+                with different brands and create content around
+                beauty, skincare, lifestyle, and lately, food.
+            </p>
+
+            <p>
+                What I enjoy most is the filming process and
+                getting to work with brands. Creating content
+                has also helped me become more comfortable
+                communicating ideas, including doing voiceovers.
+            </p>
+
+            <p>
+                UGC taught me that consistency can take you
+                further than you expect. It gave me a space
+                to explore what I can do and what I want to
+                learn next.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="creator-gallery">
+
+        <img
+            src="https://uploads.onecompiler.io/454xwa63v/1791377867505/IMG_1808.jpeg"
+            alt="UGC creation"
+        >
+
+        <img
+            src="https://uploads.onecompiler.io/454xwa63v/1791377890965/IMG_1802.jpeg"
+            alt="UGC creation"
+        >
+
+        <img
+            src="https://uploads.onecompiler.io/454xwa63v/1791377964058/IMG_1810.jpeg"
+            alt="UGC creation"
+        >
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- BEAUTY -->
+
+<section class="beauty-section">
+
+<div class="beauty-inner">
+
+    <div class="section-title">
+        <span class="section-number">05</span>
+        <h2>Beauty & Lifestyle</h2>
+        <div class="line"></div>
+    </div>
+
+    <div class="beauty-grid">
+
+        <div class="beauty-card">
+
+            <img
+                src="https://uploads.onecompiler.io/452qssypm/1791382289093/IMG_7117.jpeg"
+                alt="Makeup"
+            >
+
+            <p>Makeup as a form of creativity</p>
+
+        </div>
+
+        <div class="beauty-card">
+
+            <img
+                src="https://uploads.onecompiler.io/452qssypm/1791382282939/IMG_7118.jpeg"
+                alt="Beauty products"
+            >
+
+            <p>Exploring beauty & lifestyle content</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section class="projects-section">
+
+<div class="projects-inner">
+
+    <div class="section-title">
+        <span class="section-number">06</span>
+        <h2>Projects I've Worked On</h2>
+        <div class="line"></div>
+    </div>
+
+
+    <!-- ENTREPRENEURSHIP -->
+
+    <div class="project">
+
+        <div class="project-label">
+            SENIOR HIGH SCHOOL
+        </div>
+
+        <h3>Entrepreneurship Project</h3>
+
+        <p>
+            One of our projects in Senior High School was
+            creating and presenting a business idea as a group.
+            We created stickers, button pins, and pain relief
+            oil. What made our booth stand out was that we were
+            the only stall that wasn't selling food.
+        </p>
+
+        <br>
+
+        <p>
+            My role included helping create more button pins
+            and providing the pain relief oils. The experience
+            helped me learn more about teamwork, creativity,
+            entrepreneurship, and presenting products to
+            customers.
+        </p>
+
+        <div class="project-photos">
+
+            <img
+                src="https://uploads.onecompiler.io/454xwa63v/1791377669894/IMG_6925.jpeg"
+                alt="Entrepreneurship project"
+            >
+
+            <img
+                src="https://uploads.onecompiler.io/454xwa63v/1791377792868/IMG_4976.jpeg"
+                alt="Entrepreneurship project"
+            >
+
+        </div>
+
+    </div>
+
+
+    <!-- CAFE -->
+
+    <div class="project">
+
+        <div class="project-label">
+            PERSONAL EXPLORATION
+        </div>
+
+        <div class="cafe-project">
+
+            <div>
+
+                <h3>Exploring Cafés</h3>
+
+                <p>
+                    Exploring cafés is one of the things I
+                    genuinely enjoy. It also connects with my
+                    interest in lifestyle content, and I'd love
+                    to create more café and lifestyle vlogs
+                    in the future.
+                </p>
+
+            </div>
+
+            <img
+                src="https://uploads.onecompiler.io/454xwa63v/1791378052548/IMG_2752.jpeg"
+                alt="Café exploration"
+            >
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- STUDENT JOURNEY -->
+
+<section class="student-section">
+
+<div class="student-inner">
+
+    <div class="section-title">
+        <span class="section-number">07</span>
+        <h2>Life as a Marketing Student</h2>
+        <div class="line"></div>
+    </div>
+
+    <div class="student-grid">
+
+        <img
+            src="https://uploads.onecompiler.io/452qssypm/1791382468115/att.3SRfZsmaW52-v1KoPNovfovoCx6AT929KmNWrTY89Qo.jpeg"
+            alt="Working on a school presentation"
+        >
+
+        <div class="student-text">
+
+            <h3>
+                Learning by doing.
+            </h3>
+
+            <p>
+                As a first-year Marketing student, I'm still
+                discovering the different areas of Marketing
+                and where I see myself in the future.
+            </p>
+
+            <br>
+
+            <p>
+                School projects have given me opportunities
+                to practice presenting ideas, working with
+                others, organizing information, and using
+                creativity — skills that I also use as a
+                content creator.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- JOURNEY -->
+
+<section class="journey">
+
+    <div class="section-title">
+        <span class="section-number">08</span>
+        <h2>Looking Ahead</h2>
+        <div class="line"></div>
+    </div>
+
+    <p>
+        My interest in content creation started before I
+        became a Marketing student. I discovered UGC and
+        decided to explore it, eventually working with
+        different brands and creating content around the
+        things I enjoy.
+    </p>
+
+    <p>
+        Since May 2025, UGC has helped me explore beauty,
+        skincare, lifestyle, and food content. More than
+        creating videos, it has taught me that consistency
+        can really take you far.
+    </p>
+
+    <p>
+        Moving forward, I want to explore lifestyle vlogs,
+        especially school-related content, while continuing
+        to discover whether social media marketing, public
+        relations, or another area of Marketing is where
+        I want to build my career.
+    </p>
+
+    <div class="script">
+        creating my own path, one experience at a time. ♡
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+    RISSJANNE <span>♡</span>
+    · MARKETING STUDENT
+    · UGC CREATOR
+</footer>
+
+
+</body>
+</html>
