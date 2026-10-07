@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rissjanne — Marketplace ♡</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@400;500;600&family=Sacramento&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fffaf7;
+    color: #5b4545;
+    font-family: "DM Sans", sans-serif;
+}
+
+:root {
+    --cream: #fffaf7;
+    --cream-dark: #f7eee8;
+    --pink: #e8b5c2;
+    --pink-dark: #b97889;
+    --pink-light: #f8e5ea;
+    --brown: #5b4545;
+    --brown-light: #806c6c;
+}
+
+
+/* NAV */
+
+nav {
+    height: 76px;
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(255,250,247,.95);
+
+    border-bottom: 1px solid #eadbd6;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    backdrop-filter: blur(12px);
+}
+
+.logo {
+    text-decoration: none;
+    color: var(--brown);
+
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+}
+
+.logo span {
+    color: var(--pink-dark);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--brown-light);
+
+    font-size: 10px;
+    letter-spacing: 1.5px;
+
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: var(--pink-dark);
+}
+
+
+/* BACK TO HOME */
+
+.back-home {
+    width: min(1100px, 90%);
+    margin: 25px auto 0;
+}
+
+.back-home a {
+    display: inline-block;
+
+    text-decoration: none;
+
+    color: var(--brown-light);
+
+    font-size: 9px;
+    letter-spacing: 1px;
+
+    padding: 9px 17px;
+
+    border: 1px solid #e5cfca;
+
+    border-radius: 20px;
+
+    background: var(--cream);
+
+    transition: .3s;
+}
+
+.back-home a:hover {
+    background: var(--pink-light);
+
+    color: var(--pink-dark);
+
+    transform: translateX(-3px);
+}
+
+
+/* HERO */
+
+.hero {
+    width: min(1100px, 90%);
+    margin: auto;
+
+    padding: 90px 20px 80px;
+
+    text-align: center;
+}
+
+.hero-label {
+    color: var(--pink-dark);
+
+    font-size: 10px;
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+
+    font-weight: 500;
+
+    color: var(--brown);
+
+    font-size: clamp(50px, 8vw, 85px);
+
+    line-height: 1;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: var(--pink-dark);
+    font-style: italic;
+}
+
+.hero p {
+    max-width: 570px;
+    margin: auto;
+
+    color: var(--brown-light);
+
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.hero-script {
+    font-family: "Sacramento", cursive;
+
+    color: var(--pink-dark);
+
+    font-size: 32px;
+
+    margin-top: 22px;
+}
+
+
+/* GENERAL SECTIONS */
+
+.section-title {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 40px;
+}
+
+.section-number {
+    color: var(--pink-dark);
+
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 36px;
+    font-weight: 500;
+
+    color: var(--brown);
+}
+
+.line {
+    flex: 1;
+
+    height: 1px;
+
+    background: #e5cfca;
+}
+
+
+/* PRODUCTS */
+
+.shop-section {
+    background: var(--cream-dark);
+
+    width: 100%;
+
+    padding: 80px 5%;
+
+    border-top: 1px dashed #dec6c0;
+    border-bottom: 1px dashed #dec6c0;
+}
+
+.shop-inner {
+    width: min(1100px, 100%);
+    margin: auto;
+}
+
+.product-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px;
+}
+
+.product-card {
+    background: white;
+
+    border: 1px solid #eadbd6;
+
+    padding: 32px;
+
+    position: relative;
+
+    transition: .35s;
+
+    box-shadow: 0 8px 25px rgba(91,69,69,.04);
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 18px 35px rgba(91,69,69,.10);
+}
+
+.product-number {
+    position: absolute;
+
+    top: 18px;
+    right: 20px;
+
+    color: #d8b5bd;
+
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+
+/* APP LOGOS */
+
+.product-logo {
+    width: 75px;
+    height: 75px;
+
+    object-fit: contain;
+
+    margin-bottom: 20px;
+
+    border-radius: 18px;
+}
+
+.product-label {
+    color: var(--pink-dark);
+
+    font-size: 9px;
+    letter-spacing: 2px;
+
+    margin-bottom: 7px;
+}
+
+.product-card h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 29px;
+    font-weight: 500;
+
+    color: var(--brown);
+
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    color: var(--brown-light);
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+}
+
+
+/* BADGES */
+
+.badge {
+    display: inline-block;
+
+    background: var(--brown);
+
+    color: white;
+
+    padding: 6px 10px;
+
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 13px;
+}
+
+.badge.pink {
+    background: var(--pink-dark);
+}
+
+
+/* PRICES */
+
+.price-box {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 20px;
+}
+
+.price {
+    background: #fff3f5;
+
+    border: 1px solid #e6c8cf;
+
+    padding: 9px 13px;
+
+    border-radius: 20px;
+
+    color: var(--pink-dark);
+
+    font-size: 10px;
+
+    font-weight: 600;
+}
+
+.price strong {
+    font-size: 13px;
+}
+
+
+/* BUTTON */
+
+.dm-button {
+    display: inline-block;
+
+    text-decoration: none;
+
+    background: var(--brown);
+
+    color: white;
+
+    padding: 12px 19px;
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    transition: .3s;
+}
+
+.dm-button:hover {
+    background: var(--pink-dark);
+
+    transform: translateY(-2px);
+}
+
+
+/* HOW TO ORDER */
+
+.how-section {
+    background: var(--pink-light);
+
+    width: 100%;
+
+    padding: 85px 5%;
+
+    border-bottom: 1px dashed #dcb7c0;
+}
+
+.how-inner {
+    width: min(1100px, 100%);
+    margin: auto;
+}
+
+.steps {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+.step {
+    background: white;
+
+    padding: 28px 20px;
+
+    border: 1px solid #eadbd6;
+
+    min-height: 190px;
+}
+
+.step-number {
+    font-family: "Sacramento", cursive;
+
+    color: var(--pink-dark);
+
+    font-size: 32px;
+
+    margin-bottom: 8px;
+}
+
+.step h3 {
+    font-family: "Playfair Display", serif;
+
+    color: var(--brown);
+
+    font-size: 20px;
+
+    font-weight: 500;
+
+    margin-bottom: 9px;
+}
+
+.step p {
+    color: var(--brown-light);
+
+    font-size: 10px;
+
+    line-height: 1.8;
+}
+
+
+/* PAYMENT */
+
+.payment-section {
+    width: min(1050px, 90%);
+
+    margin: auto;
+
+    padding: 90px 20px;
+}
+
+.payment-layout {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 50px;
+
+    align-items: center;
+}
+
+.payment-info h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 40px;
+
+    font-weight: 500;
+
+    color: var(--brown);
+
+    margin-bottom: 15px;
+}
+
+.payment-info h2 span {
+    color: var(--pink-dark);
+    font-style: italic;
+}
+
+.payment-info p {
+    color: var(--brown-light);
+
+    font-size: 12px;
+
+    line-height: 1.9;
+
+    margin-bottom: 20px;
+}
+
+.payment-note {
+    background: var(--pink-light);
+
+    border: 1px dashed #d8b4bd;
+
+    padding: 18px;
+
+    font-size: 10px;
+
+    line-height: 1.7;
+}
+
+.payment-card {
+    background: white;
+
+    border: 1px solid #e3d0cb;
+
+    padding: 18px;
+
+    box-shadow: 10px 15px 35px rgba(91,69,69,.10);
+
+    transform: rotate(1deg);
+
+    text-align: center;
+}
+
+.payment-card img {
+    width: 100%;
+    max-width: 390px;
+
+    display: block;
+
+    margin: auto;
+}
+
+.payment-caption {
+    font-family: "Sacramento", cursive;
+
+    font-size: 28px;
+
+    color: var(--brown);
+
+    margin-top: 10px;
+}
+
+
+/* BEAUTY */
+
+.beauty-section {
+    background: var(--cream-dark);
+
+    width: 100%;
+
+    padding: 85px 5%;
+
+    border-top: 1px dashed #dec6c0;
+    border-bottom: 1px dashed #dec6c0;
+}
+
+.beauty-inner {
+    width: min(1100px, 100%);
+
+    margin: auto;
+}
+
+.beauty-content {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 50px;
+
+    align-items: center;
+}
+
+
+/* INSTAGRAM SCREENSHOT */
+
+.instagram-card {
+    background: white;
+
+    padding: 14px;
+
+    border: 1px solid #eadbd6;
+
+    box-shadow: 0 15px 30px rgba(91,69,69,.08);
+
+    transform: rotate(-1.5deg);
+}
+
+.instagram-card img {
+    width: 100%;
+
+    display: block;
+}
+
+.instagram-label {
+    text-align: center;
+
+    font-family: "Sacramento", cursive;
+
+    font-size: 27px;
+
+    color: var(--brown);
+
+    padding: 12px 0 5px;
+}
+
+
+.beauty-description h3 {
+    font-family: "Sacramento", cursive;
+
+    font-size: 39px;
+
+    color: var(--pink-dark);
+
+    font-weight: 400;
+
+    margin-bottom: 10px;
+}
+
+.beauty-description p {
+    color: var(--brown-light);
+
+    font-size: 12px;
+
+    line-height: 1.9;
+
+    margin-bottom: 20px;
+}
+
+
+/* TRUST */
+
+.trust {
+    width: min(800px, 90%);
+
+    margin: 70px auto 0;
+
+    text-align: center;
+}
+
+.trust p {
+    font-family: "Sacramento", cursive;
+
+    font-size: 30px;
+
+    color: var(--brown);
+
+    margin-bottom: 8px;
+}
+
+.trust small {
+    color: var(--brown-light);
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 28px;
+
+    text-align: center;
+
+    background: var(--brown);
+
+    color: #f4dfe4;
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+}
+
+footer span {
+    color: #eab8c5;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .steps {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .payment-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .beauty-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    nav {
+        padding: 0 20px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 8px;
+    }
+
+    .hero {
+        padding-top: 65px;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .section-title h2 {
+        font-size: 29px;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .payment-section {
+        padding: 65px 15px;
+    }
+
+    .payment-info h2 {
+        font-size: 34px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <a href="index.html" class="logo">
+        <span>♡</span> RISSJANNE
+    </a>
+
+    <div class="nav-links">
+
+        <a href="#shop">SHOP</a>
+
+        <a href="#how">HOW TO ORDER</a>
+
+        <a href="#beauty">BEAUTY</a>
+
+    </div>
+
+</nav>
+
+
+<!-- BACK TO HOME -->
+
+<div class="back-home">
+    <a href="index.html">← Back to Home</a>
+</div>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+    <p class="hero-label">
+        ♡ WELCOME TO MY MARKETPLACE ♡
+    </p>
+
+    <h1>
+        digital <span>finds</span>
+    </h1>
+
+    <p>
+        A collection of digital tools, apps,
+        subscriptions, and beauty finds that I've
+        gathered along my creator journey.
+    </p>
+
+    <div class="hero-script">
+        pick something you love ♡
+    </div>
+
+</header>
+
+
+<!-- DIGITAL PRODUCTS -->
+
+<section class="shop-section" id="shop">
+
+<div class="shop-inner">
+
+    <div class="section-title">
+
+        <span class="section-number">01</span>
+
+        <h2>Digital Finds</h2>
+
+        <div class="line"></div>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+        <!-- CANVA -->
+
+        <div class="product-card">
+
+            <span class="product-number">01</span>
+
+            <img
+                class="product-logo"
+                src="https://uploads.onecompiler.io/452qssypm/1791379752600/IMG_7103-Photoroom.png"
+                alt="Canva Premium"
+            >
+
+            <div class="product-label">
+                CREATIVE TOOL
+            </div>
+
+            <h3>
+                Canva Premium
+            </h3>
+
+            <p>
+                Monthly Canva Premium access through
+                an invite. Perfect for creators, students,
+                and anyone who loves designing.
+            </p>
+
+            <div class="badge pink">
+                MONTHLY
+            </div>
+
+            <div class="price-box">
+
+                <div class="price">
+                    <strong>₱25</strong> / month
+                </div>
+
+            </div>
+
+            <a
+                href="https://www.instagram.com/bentanityli/"
+                target="_blank"
+                class="dm-button"
+            >
+                MESSAGE ME →
+            </a>
+
+        </div>
+
+
+        <!-- CAPCUT -->
+
+        <div class="product-card">
+
+            <span class="product-number">02</span>
+
+            <img
+                class="product-logo"
+                src="https://uploads.onecompiler.io/452qssypm/1791379788549/IMG_7109.jpeg"
+                alt="CapCut Premium"
+            >
+
+            <div class="product-label">
+                VIDEO EDITING
+            </div>
+
+            <h3>
+                CapCut Premium
+            </h3>
+
+            <p>
+                Premium access for editing videos,
+                creating content, and unlocking
+                additional CapCut features.
+            </p>
+
+            <div class="badge">
+                FLEXIBLE OPTIONS
+            </div>
+
+            <div class="price-box">
+
+                <div class="price">
+                    <strong>₱35</strong> · 7 days shared
+                </div>
+
+                <div class="price">
+                    <strong>₱45</strong> · 7 days solo
+                </div>
+
+                <div class="price">
+                    <strong>₱65</strong> · 1 month shared
+                </div>
+
+                <div class="price">
+                    <strong>₱125</strong> · 1 month solo
+                </div>
+
+            </div>
+
+            <a
+                href="https://www.instagram.com/bentanityli/"
+                target="_blank"
+                class="dm-button"
+            >
+                MESSAGE ME →
+            </a>
+
+        </div>
+
+
+        <!-- DAZZ CAM -->
+
+        <div class="product-card">
+
+            <span class="product-number">03</span>
+
+            <img
+                class="product-logo"
+                src="https://uploads.onecompiler.io/452qssypm/1791379737771/IMG_7100-Photoroom.png"
+                alt="Dazz Cam Pro"
+            >
+
+            <div class="product-label">
+                PHOTO APP
+            </div>
+
+            <h3>
+                Dazz Cam Pro
+            </h3>
+
+            <p>
+                Get access to Dazz Cam Pro through
+                a one-time payment for film-inspired
+                photo effects and creative content.
+            </p>
+
+            <div class="badge pink">
+                ONE-TIME PAYMENT
+            </div>
+
+            <p>
+                An Apple ID account will be provided.
+                Sign in, download the app, then log
+                back into your own account.
+            </p>
+
+            <a
+                href="https://www.instagram.com/bentanityli/"
+                target="_blank"
+                class="dm-button"
+            >
+                MESSAGE ME →
+            </a>
+
+        </div>
+
+
+        <!-- GOODNOTES -->
+
+        <div class="product-card">
+
+            <span class="product-number">04</span>
+
+            <img
+                class="product-logo"
+                src="https://uploads.onecompiler.io/452qssypm/1791379743254/IMG_7101-Photoroom.png"
+                alt="Goodnotes"
+            >
+
+            <div class="product-label">
+                STUDY TOOL
+            </div>
+
+            <h3>
+                Goodnotes
+            </h3>
+
+            <p>
+                Goodnotes access through a provided
+                email account. Sign in and use it for
+                digital notes, school, planning, and more.
+            </p>
+
+            <div class="badge pink">
+                ONE-TIME PAYMENT
+            </div>
+
+            <p>
+                Your notes won't be visible to other
+                users.
+            </p>
+
+            <a
+                href="https://www.instagram.com/bentanityli/"
+                target="_blank"
+                class="dm-button"
+            >
+                MESSAGE ME →
+            </a>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- HOW TO ORDER -->
+
+<section class="how-section" id="how">
+
+<div class="how-inner">
+
+    <div class="section-title">
+
+        <span class="section-number">02</span>
+
+        <h2>How to Order</h2>
+
+        <div class="line"></div>
+
+    </div>
+
+
+    <div class="steps">
+
+        <div class="step">
+
+            <div class="step-number">01</div>
+
+            <h3>Choose</h3>
+
+            <p>
+                Pick the digital product or
+                beauty find you're interested in.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">02</div>
+
+            <h3>Message Me</h3>
+
+            <p>
+                Send me a DM on Instagram to
+                check availability and confirm
+                your order.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">03</div>
+
+            <h3>Pay</h3>
+
+            <p>
+                Once your order is confirmed,
+                proceed with payment using
+                the QR code below.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">04</div>
+
+            <h3>Receive</h3>
+
+            <p>
+                Receive your invite, account
+                details, or product information
+                depending on your purchase.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- PAYMENT -->
+
+<section class="payment-section">
+
+<div class="payment-layout">
+
+
+    <div class="payment-info">
+
+        <p class="hero-label">
+            ♡ PAYMENT
+        </p>
+
+        <h2>
+            scan & <span>pay</span>
+        </h2>
+
+        <p>
+            After confirming your order through
+            Instagram, scan the QR code to complete
+            your payment.
+        </p>
+
+        <div class="payment-note">
+
+            <strong>♡ Please remember:</strong><br><br>
+
+            Always double-check the account name
+            before paying. After payment, send your
+            receipt or screenshot through Instagram
+            DM so I can process your order.
+
+        </div>
+
+        <br>
+
+        <a
+            href="https://www.instagram.com/bentanityli/"
+            target="_blank"
+            class="dm-button"
+        >
+            MESSAGE ME ON INSTAGRAM →
+        </a>
+
+    </div>
+
+
+    <div class="payment-card">
+
+        <img
+            src="https://uploads.onecompiler.io/452qssypm/1791379100821/IMG_0144.jpeg"
+            alt="Payment QR Code"
+        >
+
+        <div class="payment-caption">
+            scan me ♡
+        </div>
+
+    </div>
+
+
+</div>
+
+</section>
+
+
+<!-- BEAUTY FINDS -->
+
+<section class="beauty-section" id="beauty">
+
+<div class="beauty-inner">
+
+    <div class="section-title">
+
+        <span class="section-number">03</span>
+
+        <h2>Beauty Finds</h2>
+
+        <div class="line"></div>
+
+    </div>
+
+
+    <div class="beauty-content">
+
+
+        <!-- INSTAGRAM PREVIEW -->
+
+        <div class="instagram-card">
+
+            <img
+                src="https://uploads.onecompiler.io/452qssypm/1791379918231/IMG_7110.png"
+                alt="Rissjanne Instagram Preview"
+            >
+
+            <div class="instagram-label">
+                from my creator shelf ♡
+            </div>
+
+        </div>
+
+
+        <!-- TEXT -->
+
+        <div class="beauty-description">
+
+            <h3>
+                beauty finds
+            </h3>
+
+            <p>
+                Sealed or minimally used makeup and
+                skincare products from my UGC creator
+                journey.
+            </p>
+
+            <p>
+                Some products come from brands I've
+                worked with as a creator. Instead of
+                letting them sit unused, I'm giving
+                them a new home. ♡
+            </p>
+
+            <p>
+                Availability changes, so message me
+                on Instagram to see what's currently
+                available.
+            </p>
+
+            <a
+                href="https://www.instagram.com/bentanityli/"
+                target="_blank"
+                class="dm-button"
+            >
+                VIEW BEAUTY FINDS →
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="trust">
+
+        <p>
+            thank you for supporting my shop ♡
+        </p>
+
+        <small>
+            ALL ORDERS & INQUIRIES · @BENTANITYLI
+        </small>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    RISSJANNE <span>♡</span>
+    · BS MARKETING
+    · MALAYAN COLLEGES LAGUNA
+
+</footer>
+
+
+</body>
+</html>
